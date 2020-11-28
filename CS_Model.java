@@ -9,6 +9,7 @@ import ilog.concert.IloObjective;
 import ilog.concert.IloObjectiveSense;
 import ilog.cplex.IloCplex;
 
+
 public class CS_Model {
 
     protected IloCplex model;
@@ -84,6 +85,17 @@ public class CS_Model {
             System.out.println();
             System.out.println("Solution status = " + model.getStatus());
             System.out.println();
+            double count =0;
+             for (int i = 0; i < I; i++) {
+                
+                    count = count + d[i] * l[i];
+
+                }
+             System.out.println("Total length required by items' demand : " + count);
+             System.out.println();
+             count = Math.ceil(count/L);
+             System.out.println("Minimum number of stock (continuous lower bound) : " + count);
+             System.out.println();
             System.out.println("Total number of Stock used " + model.getObjValue());
             System.out.println();
             System.out.println("The variables x_{j} ");
@@ -105,7 +117,7 @@ public class CS_Model {
 
             }
             System.out.println();
-            System.out.println("Total Length used is = " + total_waste);
+            System.out.println("Total Length used for cut items is = " + total_waste);
             total_waste = L * model.getObjValue() - total_waste;
             System.out.println();
             System.out.println("Total waste is = " + total_waste);
