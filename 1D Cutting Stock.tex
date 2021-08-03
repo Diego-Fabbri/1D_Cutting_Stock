@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt,titlepage]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{tikz,pgf}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+%\usepackage[english]{babel}
+\usepackage[italian]{babel} %% Abbiamo istruito LaTeX ad usare la lingua italiana 
+
+%Link url e Barra navigazione del PDF in output
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={1D Cutting Stock},
+    bookmarks=true,
+    %pdfpagemode=FullScreen,
+}
+
+
+%Per ripartire i  più file i capitoli
+\usepackage{standalone}
+%ROTAZIONE
+\usepackage{rotating}
+
+\usepackage{tabularx}
+\usepackage{multirow} 
+\usepackage{lscape}
+\usepackage{tikz}
+%Per inserire file PDF
+\usepackage[final]{pdfpages}
+%--Packages--
+
+\usepackage{eurosym}
+\usepackage{graphicx} \usepackage{verbatim}
+\usepackage{graphics}
+\usepackage{tikz,pgf}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{amsmath,amssymb,mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx,color,listings}
+\frenchspacing 
+\usepackage{geometry}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{listings}
+%Cool maths printing
+\usepackage{amsmath}
+%PseudoCode
+\usepackage{algorithm2e}
+
+
+
+%INIZIO DOCUMENTO
+
+\begin{document}
+\section*{1D Cutting Stock}
+\subsection*{Sets}
+- $I$ = set of items; (\textit{index} $i$)\\
+- $J$ = set of cutting patterns; (\textit{index} $j$)\\
+\subsection*{Parameters}
+- $L$ = length of the standard stock;\\
+- $d_i$ = demand of item $i\in I$;\\
+- $l_i$ = length of item $i\in I$;\\
+- $a_{ij}$ = number of item $i\in I$ cut in pattern $j\in J$;\\
+- $w_j$ = waste of pattern $j\in J$;\\
+\subsection*{Variables}
+- $x_j$ = number of stocks used for cutting pattern $j\in J$;\\
+\subsection*{Model}
+\begin{equation}
+    min \sum_{j\in J} x_j
+\end{equation}
+\begin{center}
+    s.v
+\end{center}
+\begin{equation}
+    \sum_{j\in J} a_{ij}\cdot x_j \geq d_i \qquad \forall i\in I
+\end{equation}
+\begin{equation}
+    x_j \in \mathbb{Z}^+
+\end{equation}
+\end{document}
+
+

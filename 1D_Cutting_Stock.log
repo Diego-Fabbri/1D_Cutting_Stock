@@ -1,0 +1,80 @@
+Vector of waste associated to cutting patterns j :
+ ---> Waste[1] is : 0.0
+ ---> Waste[2] is : 10.0
+ ---> Waste[3] is : 15.0
+ ---> Waste[4] is : 20.0
+ ---> Waste[5] is : 20.0
+ ---> Waste[6] is : 30.0
+ ---> Waste[7] is : 35.0
+ ---> Waste[8] is : 35.0
+ ---> Waste[9] is : 55.0
+ ---> Waste[10] is : 55.0
+ ---> Waste[11] is : 65.0
+ ---> Waste[12] is : 80.0
+ ---> Waste[13] is : 100.0
+ ---> Waste[14] is : 100.0
+ ---> Waste[15] is : 110.0
+ ---> Waste[16] is : 125.0
+ ---> Waste[17] is : 145.0
+ ---> Waste[18] is : 145.0
+ ---> Waste[19] is : 190.0
+ ---> Waste[20] is : 190.0
+
+Found incumbent of value 4.2949673e+010 after 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 5 rows, 20 columns, and 43 nonzeros.
+Reduced MIP has 0 binaries, 20 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.02 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 5 rows, 20 columns, and 43 nonzeros.
+Reduced MIP has 0 binaries, 20 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.02 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 0.00 sec. (0.01 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      4.29497e+010        0.0000        5  100.00%
+      0     0       65.5000     1  4.29497e+010       65.5000        5  100.00%
+*     0+    0                           66.0000       65.5000        5    0.76%
+      0     0        cutoff             66.0000       65.5000        5    0.76%
+Elapsed time = 0.02 sec. (0.09 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (0.09 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.02 sec. (0.09 ticks)
+
+Solution status = Optimal
+
+Total length required by items' demand : 52350.0
+
+Minimum number of stock (continuous lower bound) : 62.0
+
+Total number of Stock used 66.0
+
+The variables x_{j} 
+---->x[1] = 10.0
+---->x[2] = 20.0
+---->x[3] = 10.0
+---->x[5] = 11.0
+---->x[19] = 15.0
+
+Total length of stock used = 56100.0
+
+Total Length used for cut items is = 52680.0
+
+Total waste is = 3420.0
+
+---> Number of Items 1 cut is 51.0 out of a demand 50.0
+---> Number of Items 2 cut is 30.0 out of a demand 30.0
+---> Number of Items 3 cut is 40.0 out of a demand 40.0
+---> Number of Items 4 cut is 42.0 out of a demand 42.0
+---> Number of Items 5 cut is 20.0 out of a demand 20.0
